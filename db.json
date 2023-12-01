@@ -1,0 +1,60 @@
+{
+  "posts": [
+    {
+      "id": "0",
+      "title": "title content",
+      "body": "body content",
+      "isStarred": "f",
+      "userId": "0",
+      "timestamp": "1701414297297"
+    }
+  ],
+  "answers": [
+    {
+      "id": "0",
+      "body": "body content",
+      "userId": "1",
+      "postId": "0",
+      "timestamp": "1701414297397"
+    },
+    {
+      "id": "1",
+      "body": "body content",
+      "userId": "2",
+      "postId": "0",
+      "timestamp": "1701414297597"
+    }
+  ],
+  "comments": [
+    {
+      "id": "0",
+      "body": "body content",
+      "userId": "0",
+      "postId": "0",
+      "answerId": "0",
+      "timestamp": "1701414297497"
+    },
+    {
+      "id": "1",
+      "body": "body content",
+      "userId": "2",
+      "postId": "0",
+      "answerId": "1",
+      "timestamp": "1701424297497"
+    }
+  ],
+  "users": [
+    {
+      "id": "0",
+      "name": "name 0"
+    },
+    {
+      "id": "1",
+      "name": "name 1"
+    },
+    {
+      "id": "2",
+      "name": "name 2"
+    }
+  ]
+}
