@@ -23,11 +23,11 @@ const router = createBrowserRouter([
         element: <Index />,
         loader() {
           // TODO
-          return null;
+          return fetchPost();
         },
       },
       {
-        path: "/post/:postId",
+        path: "/posts/:postId",
         element: <Post />,
         loader({ params }) {
           // TODO
