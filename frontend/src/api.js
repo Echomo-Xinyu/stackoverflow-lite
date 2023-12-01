@@ -1,5 +1,8 @@
 const baseUrl = process.env.REACT_APP_API_BASE_URL;
 
+// TODO: add upvote and downvote field to posts + answers
+// TODO: allow users to edit or delete the post
+
 // anyone can make a post / write an answer / post a comment using self-declared name
 //   name is unique to one person
 // anyone can view the comment / post by a particular person
