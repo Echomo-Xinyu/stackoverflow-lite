@@ -141,6 +141,12 @@ export function fetchUsers() {
     .then((response) => response.json());
 }
 
+// query user by id
+export function fetchUserById(userId) {
+  return fetch(`${baseUrl}/users/${userId}`)
+    .then((response) => response.json());
+}
+
 // query user's post, answer, and comment
 // achieved by combing fetchPosts(), fetchAnswers(), fetchComments()
 
