@@ -70,7 +70,7 @@ export function fetchComments() {
 }
 
 // add answer to specific post
-export function addAnswers(data) {
+export function addAnswer(data) {
   return fetch(`${baseUrl}/answers`, {
     method: "POST",
     body: JSON.stringify(data),
