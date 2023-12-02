@@ -236,7 +236,7 @@ function ContentBody(props) {
       <div className="card-body">
         <h5 className="card-title">{props.type + props.content.title}</h5>
         <h6 className="card-subtitle mb-2 text-muted">
-          By <Link to={`/user/${props.content.user.id}`}>{props.content.user.name}</Link>
+          By <Link to={`/users/${props.content.user.id}`}>{props.content.user.name}</Link>
         </h6>
         <p className="card-text">{props.content.body}</p>
       </div>
