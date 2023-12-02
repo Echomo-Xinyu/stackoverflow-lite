@@ -2,7 +2,7 @@
   "posts": [
     {
       "id": "0",
-      "title": "title content",
+      "title": "title 0",
       "body": "body content",
       "isStarred": "f",
       "userId": "0",
@@ -28,6 +28,7 @@
   "answers": [
     {
       "id": "0",
+      "title": "",
       "body": "body content",
       "userId": "1",
       "postId": "0",
@@ -35,6 +36,7 @@
     },
     {
       "id": "1",
+      "title": "",
       "body": "body content",
       "userId": "2",
       "postId": "0",
@@ -44,6 +46,7 @@
   "comments": [
     {
       "id": "0",
+      "title": "",
       "body": "body content",
       "userId": "0",
       "postId": "0",
@@ -52,6 +55,7 @@
     },
     {
       "id": "1",
+      "title": "",
       "body": "body content",
       "userId": "2",
       "postId": "0",

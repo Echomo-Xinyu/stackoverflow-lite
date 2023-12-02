@@ -54,13 +54,18 @@ export function deletePost(postId) {
 
 // /answers?_expand=user&_expand=post to expand multiple fields
 // query a specific post
+export function fetchPostById(postId) {
+  return fetch(`${baseUrl}/posts/${postId}?_expand=user`)
+    .then((response) => response.json());
+}
+
 export function fetchAnswers() {
   return fetch(`${baseUrl}/answers?_expand=user&_expand=post`)
     .then((response) => response.json());
 }
 
 export function fetchComments() {
-  return fetch(`${baseUrl}/comments`)
+  return fetch(`${baseUrl}/comments?_expand=user`)
     .then((response) => response.json());
 }
 
