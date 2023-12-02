@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Root from './Root';
 import Index from './routes/Index';
-import { fetchPost } from './api';
+import { fetchPost, fetchPostById } from './api';
 import Post from './routes/Post';
 import User from './routes/User';
 import Admin from './routes/Admin';
@@ -22,7 +22,6 @@ const router = createBrowserRouter([
         path: "/",
         element: <Index />,
         loader() {
-          // TODO
           return fetchPost();
         },
       },
@@ -30,8 +29,7 @@ const router = createBrowserRouter([
         path: "/posts/:postId",
         element: <Post />,
         loader({ params }) {
-          // TODO
-          return null;
+          return fetchPostById(params.postId);
         },
       },
       {
