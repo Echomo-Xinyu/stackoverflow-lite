@@ -14,7 +14,7 @@ const baseUrl = process.env.REACT_APP_API_BASE_URL;
 // user: id, name
 
 // query all posts
-export function fetchPost() {
+export function fetchPosts() {
   return fetch(`${baseUrl}/posts?_expand=user`)
     .then((response) => response.json());
 }

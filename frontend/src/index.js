@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Root from './Root';
 import Index from './routes/Index';
-import { fetchPost, fetchPostById } from './api';
+import { fetchPostById } from './api';
 import Post from './routes/Post';
 import User from './routes/User';
 import Admin from './routes/Admin';
@@ -21,9 +21,6 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Index />,
-        loader() {
-          return fetchPost();
-        },
       },
       {
         path: "/posts/:postId",
