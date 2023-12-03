@@ -53,6 +53,9 @@ export default function Post() {
               .filter((comment) => {
                 return comment.answerId === answer.id;
               })
+              .sort((commentA, commentB) => {
+                return commentB.timestamp - commentA.timestamp;
+              })
               .map((comment) => {
                 return (
                   <ContentBody
