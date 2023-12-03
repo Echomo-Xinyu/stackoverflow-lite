@@ -73,6 +73,7 @@ export default function Index() {
         <div className="my-3">
           <Input
             id="title"
+            required={true}
             label="title: "
             type="text"
             value={newPostTitle}
@@ -85,6 +86,7 @@ export default function Index() {
         <div className="my-3">
           <Input
             id="body"
+            required={true}
             label="body content: "
             type="textarea"
             value={newPostBody}
@@ -96,6 +98,7 @@ export default function Index() {
         <div className="my-3">
           <Input
             id="author"
+            required={true}
             label="author name: "
             type="text"
             value={newPostAuthor}

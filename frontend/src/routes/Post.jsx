@@ -64,7 +64,7 @@ export default function Post() {
               })}
             <button
               onClick={(event) => {
-                if(!isCommentFormExpaned) {
+                if (!isCommentFormExpaned) {
                   setIsCommentFormExpanded(true);
                   setNewCommentAnswerId(answer.id);
                 } else {
@@ -127,6 +127,7 @@ export default function Post() {
                 <div className="my-3">
                   <Input
                     id="body"
+                    required={true}
                     label="body content: "
                     type="textarea"
                     value={newCommentBody}
@@ -138,6 +139,7 @@ export default function Post() {
                 <div className="my-3">
                   <Input
                     id="author"
+                    required={true}
                     label="author name: "
                     type="text"
                     value={newCommentAuthor}
@@ -203,6 +205,7 @@ export default function Post() {
         <div className="my-3">
           <Input
             id="body"
+            required={true}
             label="body content: "
             type="textarea"
             value={newAnswerBody}
@@ -214,6 +217,7 @@ export default function Post() {
         <div className="my-3">
           <Input
             id="author"
+            required={true}
             label="author name: "
             type="text"
             value={newAnswerAuthor}
@@ -234,9 +238,12 @@ function ContentBody(props) {
   return (
     <div className="card mb-3">
       <div className="card-body">
-        <h5 className="card-title">{props.type + props.content.title}</h5>
+        <h5 className="card-title">{props.type + " " + props.content.title}</h5>
         <h6 className="card-subtitle mb-2 text-muted">
-          By <Link to={`/users/${props.content.user.id}`}>{props.content.user.name}</Link>
+          By{" "}
+          <Link to={`/users/${props.content.user.id}`}>
+            {props.content.user.name}
+          </Link>
         </h6>
         <p className="card-text">{props.content.body}</p>
       </div>

@@ -5,6 +5,7 @@ export default function Input(props) {
         {props.label}
       </label>
       <input
+        required={props.required | false}
         type={props.type}
         className="form-control"
         id={props.id}
