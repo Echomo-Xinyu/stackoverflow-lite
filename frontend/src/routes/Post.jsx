@@ -227,7 +227,7 @@ export default function Post() {
           />
         </div>
         <button type="submit" className="btn btn-primary">
-          Create New Post
+          Create New Answer
         </button>
       </form>
     </div>
