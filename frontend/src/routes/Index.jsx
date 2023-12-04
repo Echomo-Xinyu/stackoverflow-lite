@@ -18,6 +18,7 @@ export default function Index() {
   };
 
   useEffect(() => {
+    document.title = "Home";
     fetchPostsData();
   }, []);
 

@@ -29,6 +29,7 @@ export default function User() {
   };
 
   useEffect(() => {
+    document.title = userData.name;
     fetchData();
   }, []);
 

@@ -55,6 +55,7 @@ export default function Post() {
   };
 
   useEffect(() => {
+    document.title = post.title;
     fetchData();
   }, []);
 
