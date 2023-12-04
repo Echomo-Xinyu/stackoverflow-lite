@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import Input from "./Input";
 import { addPost, addUser, fetchPosts, fetchUsers } from "../api";
 import { v4 as uuidv4 } from "uuid";
-import { toast, ToastContainer } from "react-toastify"
-import "react-toastify/dist/ReactToastify.css"
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function Index() {
   const [posts, setPosts] = useState([]);
@@ -28,10 +28,12 @@ export default function Index() {
 
       <div>
         {posts
-        .sort((postA, postB) => { return postB.timestamp - postA.timestamp})
-        .map((post) => {
-          return <HomePost post={post} key={post.id} />;
-        })}
+          .sort((postA, postB) => {
+            return postB.timestamp - postA.timestamp;
+          })
+          .map((post) => {
+            return <HomePost post={post} key={post.id} />;
+          })}
       </div>
       <br />
       <h2>Question not found? Make your own post!</h2>
@@ -129,7 +131,13 @@ function HomePost(props) {
         <h5 className="card-title">{props.post.title}</h5>
         <h6 className="card-subtitle mb-2 text-muted">
           {props.post.user ? "By: " : ""}
-          {props.post.user ? <Link to={`/users/${props.post.user.id}`}>{props.post.user.name}</Link> : <></>}
+          {props.post.user ? (
+            <Link to={`/users/${props.post.user.id}`}>
+              {props.post.user.name}
+            </Link>
+          ) : (
+            <></>
+          )}
         </h6>
         <p className="card-text">{props.post.body.substring(0, 100)}...</p>
         <Link to={`/posts/${props.post.id}`} className="card-link">

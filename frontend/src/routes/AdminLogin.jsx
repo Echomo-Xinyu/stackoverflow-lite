@@ -13,27 +13,31 @@ export default function AdminLogin() {
   return (
     <>
       <p>You have to sign in in order to view Admin content.</p>
-          <form onSubmit={(event) => {
-            event.preventDefault();
-            if (filledPassword === AdminPassword) {
-              toggleAdmin();
-              navigate('/admin');
-            } else {
-              alert("wrong password");
-            }
-          }}>
-            <Input
-              id="password"
-              label={"Admin Password"}
-              required={false}
-              type="text"
-              value={filledPassword}
-              onInputChange={(event) => {
-                setFilledPassword(event.target.value)
-              }}
-            />
-            <button type="submit" className="btn btn-primary">Submit</button>
-          </form>
+      <form
+        onSubmit={(event) => {
+          event.preventDefault();
+          if (filledPassword === AdminPassword) {
+            toggleAdmin();
+            navigate("/admin");
+          } else {
+            alert("wrong password");
+          }
+        }}
+      >
+        <Input
+          id="password"
+          label={"Admin Password"}
+          required={false}
+          type="text"
+          value={filledPassword}
+          onInputChange={(event) => {
+            setFilledPassword(event.target.value);
+          }}
+        />
+        <button type="submit" className="btn btn-primary">
+          Submit
+        </button>
+      </form>
     </>
-  )
+  );
 }

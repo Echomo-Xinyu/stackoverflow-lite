@@ -1,18 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
 import "bootstrap/dist/css/bootstrap.css";
-import reportWebVitals from './reportWebVitals';
-import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-import Root from './Root';
-import Index from './routes/Index';
-import { fetchPostById, fetchPosts, fetchUserById } from './api';
-import Post from './routes/Post';
-import User from './routes/User';
-import { AdminProvider } from './routes/AdminContext';
-import Admin from './routes/Admin';
-import AdminHighlight from './routes/AdminHighlight';
-import AdminLogin from './routes/AdminLogin';
+import reportWebVitals from "./reportWebVitals";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Root from "./Root";
+import Index from "./routes/Index";
+import { fetchPostById, fetchPosts, fetchUserById } from "./api";
+import Post from "./routes/Post";
+import User from "./routes/User";
+import { AdminProvider } from "./routes/AdminContext";
+import Admin from "./routes/Admin";
+import AdminHighlight from "./routes/AdminHighlight";
+import AdminLogin from "./routes/AdminLogin";
 
 const router = createBrowserRouter([
   {
@@ -46,7 +46,7 @@ const router = createBrowserRouter([
         children: [
           {
             path: "login",
-            element: <AdminLogin />
+            element: <AdminLogin />,
           },
           {
             path: "highlight",
@@ -54,16 +54,14 @@ const router = createBrowserRouter([
             loader() {
               // TODO
               return null;
-            }
-          }
-        ]
-        
-        
+            },
+          },
+        ],
       },
-    ]
-  }
-])
-const root = ReactDOM.createRoot(document.getElementById('root'));
+    ],
+  },
+]);
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <AdminProvider>
     <RouterProvider router={router} />

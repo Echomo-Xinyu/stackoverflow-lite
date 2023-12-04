@@ -18,8 +18,8 @@ import {
   updatePost,
 } from "../api";
 import { v4 as uuidv4 } from "uuid";
-import { toast, ToastContainer } from "react-toastify"
-import "react-toastify/dist/ReactToastify.css"
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function Post() {
   const [post, setPost] = useState(useLoaderData());

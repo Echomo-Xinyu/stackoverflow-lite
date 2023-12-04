@@ -15,8 +15,9 @@ const baseUrl = process.env.REACT_APP_API_BASE_URL;
 
 // query all posts
 export function fetchPosts() {
-  return fetch(`${baseUrl}/posts?_expand=user`)
-    .then((response) => response.json());
+  return fetch(`${baseUrl}/posts?_expand=user`).then((response) =>
+    response.json()
+  );
 }
 
 // add post
@@ -55,18 +56,21 @@ export function deletePost(postId) {
 // /answers?_expand=user&_expand=post to expand multiple fields
 // query a specific post
 export function fetchPostById(postId) {
-  return fetch(`${baseUrl}/posts/${postId}?_expand=user`)
-    .then((response) => response.json());
+  return fetch(`${baseUrl}/posts/${postId}?_expand=user`).then((response) =>
+    response.json()
+  );
 }
 
 export function fetchAnswers() {
-  return fetch(`${baseUrl}/answers?_expand=user&_expand=post`)
-    .then((response) => response.json());
+  return fetch(`${baseUrl}/answers?_expand=user&_expand=post`).then(
+    (response) => response.json()
+  );
 }
 
 export function fetchComments() {
-  return fetch(`${baseUrl}/comments?_expand=user`)
-    .then((response) => response.json());
+  return fetch(`${baseUrl}/comments?_expand=user`).then((response) =>
+    response.json()
+  );
 }
 
 // add answer to specific post
@@ -137,14 +141,14 @@ export function deleteComment(commendId) {
 
 // query all users
 export function fetchUsers() {
-  return fetch(`${baseUrl}/users`)
-    .then((response) => response.json());
+  return fetch(`${baseUrl}/users`).then((response) => response.json());
 }
 
 // query user by id
 export function fetchUserById(userId) {
-  return fetch(`${baseUrl}/users/${userId}`)
-    .then((response) => response.json());
+  return fetch(`${baseUrl}/users/${userId}`).then((response) =>
+    response.json()
+  );
 }
 
 // query user's post, answer, and comment
@@ -153,7 +157,7 @@ export function fetchUserById(userId) {
 // add user (self-declared name, auto increment id)
 export function addUser(data) {
   return fetch(`${baseUrl}/users`, {
-    method: 'POST',
+    method: "POST",
     body: JSON.stringify(data),
     headers: {
       "content-type": "application/json",

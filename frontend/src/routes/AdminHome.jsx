@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { useLoaderData, Link } from "react-router-dom";
 import { deletePost, fetchPosts } from "../api";
-import { toast, ToastContainer } from "react-toastify"
-import "react-toastify/dist/ReactToastify.css"
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function AdminHome() {
   const [selectedPosts, setSelectedPosts] = useState([]);
@@ -12,7 +12,9 @@ export default function AdminHome() {
   const handleToggleItem = (postId) => {
     setSelectedPosts((selectedPostIDs) => {
       if (selectedPostIDs.includes(postId)) {
-        return selectedPostIDs.filter((selectedPost) => selectedPost !== postId); // Remove the post if it's already selected
+        return selectedPostIDs.filter(
+          (selectedPost) => selectedPost !== postId
+        ); // Remove the post if it's already selected
       } else {
         return [...selectedPostIDs, postId]; // Add the post if it's not selected
       }
@@ -27,7 +29,7 @@ export default function AdminHome() {
     ).then(() => {
       setSelectedPosts([]);
       toast("selected posts deleted");
-    })    
+    });
   };
 
   useEffect(() => {
@@ -39,7 +41,9 @@ export default function AdminHome() {
       setSelectedState("true");
     }
 
-    fetchPosts().then((data) => {setPosts(data)});
+    fetchPosts().then((data) => {
+      setPosts(data);
+    });
   }, [selectedPosts]);
 
   return (

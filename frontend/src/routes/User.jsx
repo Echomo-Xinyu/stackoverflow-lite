@@ -82,7 +82,9 @@ function ContentDisplay(props) {
           </Link>
         </h5>
         <p className="card-text">{props.content.body}</p>
-        <Link to={`/posts/${props.content.postId || props.content.id}`}>see original</Link>
+        <Link to={`/posts/${props.content.postId || props.content.id}`}>
+          see original
+        </Link>
       </div>
       <br />
     </div>
