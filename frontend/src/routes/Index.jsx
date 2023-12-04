@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import Input from "./Input";
 import { addPost, addUser, fetchPosts, fetchUsers } from "../api";
 import { v4 as uuidv4 } from "uuid";
+import { toast, ToastContainer } from "react-toastify"
+import "react-toastify/dist/ReactToastify.css"
 
 export default function Index() {
   const [posts, setPosts] = useState([]);
@@ -70,6 +72,7 @@ export default function Index() {
           };
 
           handleAddPost();
+          toast("new post created!");
         }}
       >
         <div className="my-3">
@@ -113,6 +116,7 @@ export default function Index() {
           Create New Post
         </button>
       </form>
+      <ToastContainer position="bottom-right" autoClose={1000} />
     </div>
   );
 }

@@ -18,6 +18,8 @@ import {
   updatePost,
 } from "../api";
 import { v4 as uuidv4 } from "uuid";
+import { toast, ToastContainer } from "react-toastify"
+import "react-toastify/dist/ReactToastify.css"
 
 export default function Post() {
   const [post, setPost] = useState(useLoaderData());
@@ -102,6 +104,7 @@ export default function Post() {
                   fetchData();
                 };
                 handleUpdatePost();
+                toast("post updated!");
               }}
             >
               <div className="my-3">
@@ -162,6 +165,7 @@ export default function Post() {
                         fetchData();
                       };
                       handleDeleteAnswer();
+                      toast("answer deleted!");
                     }}
                   >
                     Delete answer
@@ -185,6 +189,7 @@ export default function Post() {
                           fetchData();
                         };
                         handleUpdateAnswer();
+                        toast("answer updated!");
                       }}
                     >
                       <div className="my-3">
@@ -246,6 +251,7 @@ export default function Post() {
                                 fetchData();
                               };
                               handleDeleteComment();
+                              toast("comment deleted!");
                             }}
                           >
                             Delete comment
@@ -270,6 +276,7 @@ export default function Post() {
                                   fetchData();
                                 };
                                 handleUpdateComment();
+                                toast("comment updated!");
                               }}
                             >
                               <div className="my-3">
@@ -356,6 +363,7 @@ export default function Post() {
                     handleAddComment();
                     setIsCommentFormExpanded(false);
                     setNewCommentAnswerId("");
+                    toast("new comment added!");
                   }}
                 >
                   {/* TODO: make body content have larger box */}
@@ -434,6 +442,7 @@ export default function Post() {
           };
 
           handleAddAnswer();
+          toast("new answer added!");
         }}
       >
         {/* TODO: make body content have larger box */}
@@ -465,6 +474,7 @@ export default function Post() {
           Create New Answer
         </button>
       </form>
+      <ToastContainer position="bottom-right" autoClose={1000} />
     </div>
   );
 }

@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { useLoaderData, Link } from "react-router-dom";
 import { deletePost, fetchPosts } from "../api";
+import { toast, ToastContainer } from "react-toastify"
+import "react-toastify/dist/ReactToastify.css"
 
 export default function AdminHome() {
   const [selectedPosts, setSelectedPosts] = useState([]);
@@ -24,6 +26,7 @@ export default function AdminHome() {
       })
     ).then(() => {
       setSelectedPosts([]);
+      toast("selected posts deleted");
     })    
   };
 
@@ -114,6 +117,7 @@ export default function AdminHome() {
           ))}
         </tbody>
       </table>
+      <ToastContainer position="bottom-right" autoClose={1000} />
     </div>
   );
 }
