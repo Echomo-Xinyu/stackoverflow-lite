@@ -24,7 +24,9 @@ export default function Index() {
       <h1>Home</h1>
 
       <div>
-        {posts.map((post) => {
+        {posts
+        .sort((postA, postB) => { return postB.timestamp - postA.timestamp})
+        .map((post) => {
           return <HomePost post={post} key={post.id} />;
         })}
       </div>

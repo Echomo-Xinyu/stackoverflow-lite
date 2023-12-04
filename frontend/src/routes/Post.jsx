@@ -43,12 +43,16 @@ export default function Post() {
   return (
     <div className="container">
       <ContentBody type="Post:" content={postData} />
-      {answers.map((answer) => {
+      {answers
+      .sort((answerA, answerB) => {
+        return answerB.timestamp - answerA.timestamp;
+      })
+      .map((answer) => {
         return (
           <div key={"answers" + answer.id} className="container">
             <br />
             <ContentBody type="Answer: " content={answer} />
-
+            {comments.length > 0 ? <p>Comments sorted from latest to oldest</p> : <></>}
             {comments
               .filter((comment) => {
                 return comment.answerId === answer.id;
