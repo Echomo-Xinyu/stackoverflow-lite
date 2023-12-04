@@ -6,12 +6,11 @@ import reportWebVitals from './reportWebVitals';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Root from './Root';
 import Index from './routes/Index';
-import { fetchPostById, fetchUserById } from './api';
+import { fetchPostById, fetchPosts, fetchUserById } from './api';
 import Post from './routes/Post';
 import User from './routes/User';
 import { AdminProvider } from './routes/AdminContext';
 import Admin from './routes/Admin';
-import AdminHome from './routes/AdminHome';
 import AdminHighlight from './routes/AdminHighlight';
 import AdminLogin from './routes/AdminLogin';
 
@@ -41,6 +40,9 @@ const router = createBrowserRouter([
       {
         path: "admin",
         element: <Admin />,
+        loader() {
+          return fetchPosts();
+        },
         children: [
           {
             path: "login",
