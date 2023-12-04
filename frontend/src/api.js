@@ -83,7 +83,7 @@ export function addAnswer(data) {
 }
 
 // (admin) update answer
-export function updateAnswers(answerId, data) {
+export function updateAnswer(answerId, data) {
   return fetch(`${baseUrl}/answers/${answerId}`, {
     method: "PATCH",
     body: JSON.stringify(data),
