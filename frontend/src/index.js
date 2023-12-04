@@ -11,7 +11,6 @@ import Post from "./routes/Post";
 import User from "./routes/User";
 import { AdminProvider } from "./routes/AdminContext";
 import Admin from "./routes/Admin";
-import AdminHighlight from "./routes/AdminHighlight";
 import AdminLogin from "./routes/AdminLogin";
 
 const router = createBrowserRouter([
@@ -47,15 +46,7 @@ const router = createBrowserRouter([
           {
             path: "login",
             element: <AdminLogin />,
-          },
-          {
-            path: "highlight",
-            element: <AdminHighlight />,
-            loader() {
-              // TODO
-              return null;
-            },
-          },
+          }
         ],
       },
     ],

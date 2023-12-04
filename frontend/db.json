@@ -1,80 +1,250 @@
 {
   "posts": [
     {
-      "id": "0",
-      "title": "title 0",
-      "body": "body content",
-      "isStarred": "f",
-      "userId": "0",
-      "timestamp": "1701414297297"
+      "id": "9c19eed2-d8a7-456a-a710-d98e1ec11234",
+      "title": "How to ask a good question",
+      "body": "as per title, I am thinking about how to ask some good questions",
+      "userId": "964ec980-3f02-43e6-b25b-d1ed480b81a7",
+      "timestamp": 1701561757605
     },
     {
-      "id": "1",
-      "title": "title content",
-      "body": "body content",
-      "isStarred": "f",
-      "userId": "0",
-      "timestamp": "1701414297297"
-    },
-    {
-      "id": "2",
-      "title": "title content",
-      "body": "body content",
-      "isStarred": "f",
-      "userId": "1",
-      "timestamp": "1701414297297"
+      "id": "decfdd2c-73c8-4380-a976-094bdca5bd6d",
+      "title": "Exploring the Benefits of Mindfulness Meditation",
+      "body": "In today's hectic world, many people turn to mindfulness meditation for peace and focus. Share your experiences and insights below! New content",
+      "userId": "789dbc28-6254-4d5b-aac5-ff58700e20b8",
+      "timestamp": 1701724600869
     }
   ],
   "answers": [
     {
-      "id": "0",
+      "id": "0a396400-c281-4ac0-97f0-bb1fa0e48239",
       "title": "",
-      "body": "body content",
-      "userId": "1",
-      "postId": "0",
-      "timestamp": "1701414297397"
+      "body": "Be clear and specific. Use proper grammar. Ask open-ended questions. Avoid leading questions. Prioritize relevance. Consider the other person's perspective. Be respectful. Double-check for clarity. Provide background if needed. Be open to follow-up questions. Use appropriate channels. Give people time to respond.",
+      "userId": "929c9633-a38a-4eec-89b3-7d6f6653a63c",
+      "postId": "9c19eed2-d8a7-456a-a710-d98e1ec11234",
+      "timestamp": 1701561816522
     },
     {
-      "id": "1",
+      "id": "66dadee3-ede0-45b2-8ada-9ec97600e53e",
       "title": "",
-      "body": "body content",
-      "userId": "2",
-      "postId": "0",
-      "timestamp": "1701414297597"
+      "body": "I've been practicing mindfulness for a year, and it's transformative. My focus has improved, and I'm more present in daily activities.",
+      "userId": "c6c76bac-67cd-487f-b689-bdd41834f63a",
+      "postId": "decfdd2c-73c8-4380-a976-094bdca5bd6d",
+      "timestamp": 1701562768856
+    },
+    {
+      "id": "51899123-d670-444d-891e-09d850888405",
+      "title": "",
+      "body": "Mindfulness has helped me manage stress. Deep breathing exercises and body scans are my go-to practices.",
+      "userId": "b01740cd-1d0a-456c-86f5-ef773de9bd29",
+      "postId": "decfdd2c-73c8-4380-a976-094bdca5bd6d",
+      "timestamp": 1701562831466
+    },
+    {
+      "id": "5c5f5e16-2b48-4cc0-b1e8-5c81b45a65f3",
+      "title": "",
+      "body": "I started with mindfulness to enhance my creativity. It opened up new perspectives in my work and personal projects.",
+      "userId": "c96b27da-f56c-4821-bc9f-6d87e5c5f2f0",
+      "postId": "decfdd2c-73c8-4380-a976-094bdca5bd6d",
+      "timestamp": 1701562918798
     }
   ],
   "comments": [
     {
-      "id": "0",
+      "id": "e00d2240-ff0a-4df0-bb72-02346ab36b58",
       "title": "",
-      "body": "body content",
-      "userId": "0",
-      "postId": "0",
-      "answerId": "0",
-      "timestamp": "1701414297497"
+      "body": "Ty",
+      "userId": "964ec980-3f02-43e6-b25b-d1ed480b81a7",
+      "postId": "9c19eed2-d8a7-456a-a710-d98e1ec11234",
+      "answerId": "0a396400-c281-4ac0-97f0-bb1fa0e48239",
+      "timestamp": 1701561830253
     },
     {
-      "id": "1",
+      "id": "09e07a39-c201-4319-9526-72cde2e4cdcf",
       "title": "",
-      "body": "body content",
-      "userId": "2",
-      "postId": "0",
-      "answerId": "1",
-      "timestamp": "1701424297497"
+      "body": "I agree! What specific techniques do you use during your mindfulness sessions?",
+      "userId": "5971ccdf-0f01-46dd-b3f7-536f263de338",
+      "postId": "decfdd2c-73c8-4380-a976-094bdca5bd6d",
+      "answerId": "66dadee3-ede0-45b2-8ada-9ec97600e53e",
+      "timestamp": 1701562788909
+    },
+    {
+      "id": "692837b2-9d4e-42fc-a311-7a7af17c62e3",
+      "title": "",
+      "body": "I've tried it, but I struggle to stay consistent. Any tips for maintaining a regular meditation routine?",
+      "userId": "0d2d66e9-784d-4359-a81c-ad48842a34aa",
+      "postId": "decfdd2c-73c8-4380-a976-094bdca5bd6d",
+      "answerId": "66dadee3-ede0-45b2-8ada-9ec97600e53e",
+      "timestamp": 1701724727880
+    },
+    {
+      "id": "e6f49339-6542-4ea8-b9e9-7caa25768935",
+      "title": "",
+      "body": "I'm curious about body scans. Can you elaborate on how you incorporate them into your routine?",
+      "userId": "f9fe8cb4-5a8d-49cc-a78b-3b60b0390882",
+      "postId": "decfdd2c-73c8-4380-a976-094bdca5bd6d",
+      "answerId": "51899123-d670-444d-891e-09d850888405",
+      "timestamp": 1701562879965
+    },
+    {
+      "id": "f8785934-de55-46fd-8a46-fa2e9fd8293e",
+      "title": "",
+      "body": "Does anyone use apps for guided mindfulness? Any recommendations?",
+      "userId": "bd37f923-a21b-45af-8076-49cad532c7ea",
+      "postId": "decfdd2c-73c8-4380-a976-094bdca5bd6d",
+      "answerId": "51899123-d670-444d-891e-09d850888405",
+      "timestamp": 1701562899747
+    },
+    {
+      "id": "74ce9717-19aa-406c-8f83-ba50a52e0e13",
+      "title": "",
+      "body": "That's fascinating! Have you noticed specific changes in your creative process since starting mindfulness?",
+      "userId": "3c01f432-cbba-4fe5-9746-653d0c846487",
+      "postId": "decfdd2c-73c8-4380-a976-094bdca5bd6d",
+      "answerId": "5c5f5e16-2b48-4cc0-b1e8-5c81b45a65f3",
+      "timestamp": 1701562939982
     }
   ],
   "users": [
     {
-      "id": "0",
-      "name": "name 0"
+      "id": "311307a8-2e75-4474-88fa-6e1a3bbdeaa7",
+      "name": "Bob"
     },
     {
-      "id": "1",
-      "name": "name 1"
+      "id": "fc77d9cb-ceb0-4886-8a10-52644857da8e",
+      "name": "Echomo"
     },
     {
-      "id": "2",
-      "name": "name 2"
+      "id": "964ec980-3f02-43e6-b25b-d1ed480b81a7",
+      "name": "Alice"
+    },
+    {
+      "id": "929c9633-a38a-4eec-89b3-7d6f6653a63c",
+      "name": "ChatGPT"
+    },
+    {
+      "id": "8694d5a3-5e74-425d-b411-f454b70c855a",
+      "name": "Jon"
+    },
+    {
+      "id": "789dbc28-6254-4d5b-aac5-ff58700e20b8",
+      "name": "JohnMeditates22"
+    },
+    {
+      "id": "c6c76bac-67cd-487f-b689-bdd41834f63a",
+      "name": "ZenSeeker88"
+    },
+    {
+      "id": "5971ccdf-0f01-46dd-b3f7-536f263de338",
+      "name": "MindfulInquirer"
+    },
+    {
+      "id": "0d2d66e9-784d-4359-a81c-ad48842a34aa",
+      "name": "SeekingBalance"
+    },
+    {
+      "id": "b01740cd-1d0a-456c-86f5-ef773de9bd29",
+      "name": "CalmBreather"
+    },
+    {
+      "id": "f9fe8cb4-5a8d-49cc-a78b-3b60b0390882",
+      "name": "CuriousMind88"
+    },
+    {
+      "id": "bd37f923-a21b-45af-8076-49cad532c7ea",
+      "name": "AppMeditator"
+    },
+    {
+      "id": "c96b27da-f56c-4821-bc9f-6d87e5c5f2f0",
+      "name": "CreativeExplorer"
+    },
+    {
+      "id": "3c01f432-cbba-4fe5-9746-653d0c846487",
+      "name": "InspiredMind21"
+    },
+    {
+      "id": "b23f6d88-f9fc-4f97-b87e-661e2a69e2a4",
+      "name": "Bib"
+    },
+    {
+      "id": "3c61ece7-8e37-4003-a379-6717e87ec40c",
+      "name": "sdfgsf"
+    },
+    {
+      "id": "fc7b5078-c335-4057-aa97-04831463dd02",
+      "name": "test"
+    },
+    {
+      "id": "6fa7d8a7-4f41-48f0-8821-d963e2adba6c",
+      "name": "sdfgsadfgf"
+    },
+    {
+      "id": "725925bc-2f31-4cbb-8155-08345453e72d",
+      "name": "dsfasdf"
+    },
+    {
+      "id": "63f478b6-5468-4177-8e73-7ee835915f2e",
+      "name": "asfasdgf"
+    },
+    {
+      "id": "b7ed073f-3cb0-4ce1-a2db-dedc44c1f605",
+      "name": "garghaerherhqh"
+    },
+    {
+      "id": "eb6e9613-11b4-4282-b5dd-063cc0b311d4",
+      "name": "khjlksdhfjlkasdhfljkaswhgf"
+    },
+    {
+      "id": "146932ab-27d5-4605-aeb2-9dae36a7e2e3",
+      "name": "dfhsdfhsdfjsdj"
+    },
+    {
+      "id": "2dd9467f-29ea-433b-b0e8-196674924e5a",
+      "name": "gafgasdgadsgsadgasgasga"
+    },
+    {
+      "id": "4f7b3359-b355-453a-a418-48d323b27f04",
+      "name": "fgdsfhdfsjhftjwrtuwetr"
+    },
+    {
+      "id": "4dcd641d-7bdf-4288-b824-148a9de25ae8",
+      "name": "sdfgg"
+    },
+    {
+      "id": "1f3c5045-1d96-4673-b0b4-d7d81c5f0320",
+      "name": "fdgsdfhdfshefh"
+    },
+    {
+      "id": "7f05bffd-7d9a-474d-8c5e-d5e4ea25dc9c",
+      "name": "fhsdfhdsfhsdfh"
+    },
+    {
+      "id": "848db64c-fb10-4c22-958a-aa4b39b9ab8e",
+      "name": "dfgafgasdgas"
+    },
+    {
+      "id": "9009bdd9-2648-4b3a-9e49-b510480c8a48",
+      "name": "sagsg"
+    },
+    {
+      "id": "863cfbf6-46d0-46f0-82b8-66ca6a843059",
+      "name": "dfshsdfhsef"
+    },
+    {
+      "id": "df50b139-049f-431f-8c19-4c322c2c9b73",
+      "name": "fhsdfh"
+    },
+    {
+      "id": "7cb9f344-12f9-4e0c-abe9-28b3a33f6aee",
+      "name": "anything"
+    },
+    {
+      "id": "b44fecbf-2795-4148-af56-2c4885a2c0a7",
+      "name": "author1"
+    },
+    {
+      "id": "0ae7d3eb-7baa-4434-a176-4500f7554018",
+      "name": "author 2"
     }
   ]
 }
