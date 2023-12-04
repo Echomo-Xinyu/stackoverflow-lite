@@ -28,6 +28,7 @@ export default function Post() {
   const [newAnswerAuthor, setNewAnswerAuthor] = useState("");
   const { isAdmin, toggleAdmin } = useAdmin();
   const [editContentId, setEditContentId] = useState("");
+  const [editPostTitle, setEditPostTitle] = useState("");
   const [editContentBody, setEditContentBody] = useState("");
 
   const fetchData = async () => {
@@ -59,6 +60,8 @@ export default function Post() {
           <button
             onClick={() => {
               setEditContentId(post.id);
+              setEditPostTitle(post.title);
+              setEditContentBody(post.body);
             }}
           >
             Edit
@@ -72,12 +75,13 @@ export default function Post() {
 
                   await updatePost(post.id, {
                     id: post.id,
-                    title: "",
+                    title: editPostTitle,
                     body: editContentBody,
                     isStarred: "f",
                     userId: post.userId,
                     timestamp: newTimestamp,
                   });
+                  setEditPostTitle("");
                   setEditContentBody("");
                   setEditContentId("");
                   fetchData();
@@ -86,6 +90,16 @@ export default function Post() {
               }}
             >
               <div className="my-3">
+              <Input
+                  id="title"
+                  required={true}
+                  label="new title: "
+                  type="text"
+                  value={editPostTitle}
+                  onInputChange={(event) => {
+                    setEditPostTitle(event.target.value);
+                  }}
+                />
                 <Input
                   id="body"
                   required={true}
@@ -121,6 +135,7 @@ export default function Post() {
                   <button
                     onClick={() => {
                       setEditContentId(answer.id);
+                      setEditContentBody(answer.body);
                     }}
                   >
                     Edit
@@ -193,6 +208,7 @@ export default function Post() {
                           <button
                             onClick={() => {
                               setEditContentId(comment.id);
+                              setEditContentBody(comment.body);
                             }}
                           >
                             Edit
