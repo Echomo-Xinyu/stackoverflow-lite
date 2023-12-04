@@ -1,10 +1,20 @@
-import { Outlet } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { useAdmin } from "./AdminContext";
+import AdminHome from "./AdminHome";
+import AdminLogin from "./AdminLogin";
 
 export default function Admin() {
+  const { isAdmin, toggleAdmin } = useAdmin();
+
   return (
     <div className="container">
-      {/* TODO: login in verification */}
-      <Outlet />
+      {isAdmin ? (
+        <AdminHome />
+      ) : (
+        <>
+          <AdminLogin />
+        </>
+      )}
     </div>
-  )
+  );
 }

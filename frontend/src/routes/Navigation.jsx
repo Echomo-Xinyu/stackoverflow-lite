@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
+import { useAdmin } from "./AdminContext";
 
 export default function Navigation() {
+  const { isAdmin, toggleAdmin } = useAdmin();
+
   return (
     <nav className="navbar navbar-expand-lg bg-light mb-2">
     <div className="container-fluid">
@@ -19,6 +22,11 @@ export default function Navigation() {
               Admin Mode
             </Link>
           </li>
+          {isAdmin ? <li className="nav-item">
+            <Link to="/" className="nav-link" onClick={(event) => {toggleAdmin()}}>
+              Sign Out Admin mode
+            </Link>
+          </li> : <></>}
         </ul>
       </div>
     </div>
