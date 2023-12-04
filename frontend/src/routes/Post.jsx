@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react";
-import { useLoaderData, Link } from "react-router-dom";
+import { useLoaderData, useNavigate, Link } from "react-router-dom";
 import { useAdmin } from "./AdminContext";
 import Input from "./Input";
 import {
   addAnswer,
   addComment,
   addUser,
+  deleteAnswer,
+  deleteComment,
+  deletePost,
   fetchAnswers,
   fetchComments,
   fetchPostById,
@@ -30,6 +33,7 @@ export default function Post() {
   const [editContentId, setEditContentId] = useState("");
   const [editPostTitle, setEditPostTitle] = useState("");
   const [editContentBody, setEditContentBody] = useState("");
+  const navigate = useNavigate();
 
   const fetchData = async () => {
     const newPostData = await fetchPostById(post.id);
@@ -66,6 +70,17 @@ export default function Post() {
           >
             Edit
           </button>
+          <button
+            onClick={() => {
+              const handleDeletePost = async () => {
+                await deletePost(post.id);
+                navigate("/");
+              };
+              handleDeletePost();
+            }}
+          >
+            Delete this post
+          </button>
           {post.id === editContentId ? (
             <form
               onSubmit={(event) => {
@@ -90,7 +105,7 @@ export default function Post() {
               }}
             >
               <div className="my-3">
-              <Input
+                <Input
                   id="title"
                   required={true}
                   label="new title: "
@@ -139,6 +154,17 @@ export default function Post() {
                     }}
                   >
                     Edit
+                  </button>
+                  <button
+                    onClick={() => {
+                      const handleDeleteAnswer = async () => {
+                        await deleteAnswer(answer.id);
+                        fetchData();
+                      };
+                      handleDeleteAnswer();
+                    }}
+                  >
+                    Delete answer
                   </button>
                   {answer.id === editContentId ? (
                     <form
@@ -212,6 +238,17 @@ export default function Post() {
                             }}
                           >
                             Edit
+                          </button>
+                          <button
+                            onClick={() => {
+                              const handleDeleteComment = async () => {
+                                await deleteComment(comment.id);
+                                fetchData();
+                              };
+                              handleDeleteComment();
+                            }}
+                          >
+                            Delete comment
                           </button>
                           {comment.id === editContentId ? (
                             <form
