@@ -37,12 +37,12 @@ export default function AdminHome() {
     }
 
     fetchPosts().then((data) => {setPosts(data)});
-  }, [selectedPosts, posts]);
+  }, [selectedPosts]);
 
   return (
     <div>
       <div className="container">
-        <text>De/select all</text>
+        <p>De/select all</p>
         {selectedState === "true" ? (
           <input
             type="checkbox"
@@ -58,7 +58,6 @@ export default function AdminHome() {
         {selectedState === "some" ? (
           <input
             type="checkbox"
-            isIndeterminate={true}
             onChange={() => {
               setSelectedState("true");
               setSelectedPosts(posts);
