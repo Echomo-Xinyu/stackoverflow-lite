@@ -6,12 +6,14 @@ import reportWebVitals from './reportWebVitals';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Root from './Root';
 import Index from './routes/Index';
-import { fetchPostById, fetchUserById, fetchUsers } from './api';
+import { fetchPostById, fetchUserById } from './api';
 import Post from './routes/Post';
 import User from './routes/User';
+import { AdminProvider } from './routes/AdminContext';
 import Admin from './routes/Admin';
 import AdminHome from './routes/AdminHome';
 import AdminHighlight from './routes/AdminHighlight';
+import AdminLogin from './routes/AdminLogin';
 
 const router = createBrowserRouter([
   {
@@ -41,12 +43,8 @@ const router = createBrowserRouter([
         element: <Admin />,
         children: [
           {
-            path: "",
-            element: <AdminHome />,
-            loader() {
-              // TODO
-          return null;
-            },
+            path: "login",
+            element: <AdminLogin />
           },
           {
             path: "highlight",
@@ -65,7 +63,9 @@ const router = createBrowserRouter([
 ])
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <RouterProvider router={router} />
+  <AdminProvider>
+    <RouterProvider router={router} />
+  </AdminProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function
