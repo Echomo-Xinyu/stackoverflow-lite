@@ -181,7 +181,7 @@ export default function Post() {
                 })
                 .map((comment) => {
                   return (
-                    <>
+                    <div className="container" key={comment.id}>
                       <ContentBody
                         key={"comment" + comment.id}
                         type="Comment: "
@@ -240,7 +240,7 @@ export default function Post() {
                       ) : (
                         <></>
                       )}
-                    </>
+                    </div>
                   );
                 })}
 
